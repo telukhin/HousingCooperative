@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HousingCooperative</title>
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+  <link rel="manifest" href="{% static "core/manifest.json" %}">
+</head>
+<body>
+
+
+
+<header class="header">
+    <form class="todo-control">
+        <label><input class="header-input" type="text" placeholder="Введите ваш вопрос"></label>
+        <button class="header-button" id="add"></button>
+    </form>
+</header>
+
+<div class="todo-container" >
+    <ul class="todo todo-list" id="todo" >
+    </ul>
+    <ul class="todo todo-completed" id="completed">
+    </ul>
+</div>
+
+<div>
+  <form action="/logout" method="post">
+      <input class="header-input" type="hidden" name="_csrf" value="{{_csrf.token}}" />
+      <input type="submit" class="btn" value="Выйти"/>
+  </form>
+</div>
+
+<script src="../script/script.js"></script>
+
+</body>
+</html>

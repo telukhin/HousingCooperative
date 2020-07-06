@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HousingCooperative</title>
+    <link rel="stylesheet" type="text/css" href="../static/login.css">
+</head>
+
+<body>
+
+<div class="main">
+  <form action="/login" class="form" method="post">
+    <div class="container-bottom">
+      <h2>Вход</h2>
+    </div>
+    <div class="container">
+      <label for="uname"><b>Логин</b></label>
+      <input type="text" placeholder="Введите логин" name="username" class="input" required>
+
+      <label for="psw"><b>Пароль</b></label>
+      <input type="password" placeholder="Введите пароль" name="password" class="input" required>
+
+      <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+      <button type="submit" class="btn">Войти</button>
+      <label>
+        <input type="checkbox" name="remember"> Запомнить меня
+      </label>
+    </div>
+    <div class="container-bottom">
+      <button type="button" class="cancelbtn btn">Отмена</button>
+      <span class="psw">Нет <a href="/registration">аккаунта?</a></span>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
